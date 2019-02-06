@@ -9,7 +9,7 @@ function queryFornotes(){
     
     let username=document.getElementById('username').value
     // console.log(username)
-    axios.get('ReadFromUserName?name=cruz',instance)
+    axios.get('https://pastebinnn.azurewebsites.net/api/ReadFromUserName?name=cruz',instance)
   .then(function (response) {
     console.log(response);
   })
