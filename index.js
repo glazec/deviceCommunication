@@ -6,9 +6,12 @@ function queryFornotes(){
     
     let username=document.getElementById('username').value
     // console.log(username)
-    axios.get('https://pastebinnn.azurewebsites.net/api/ReadFromUserName?name=cruz')
+    let url="http://localhost:7071/api/ReadFromUserName?name=cruz"
+    // "https://pastebinnn.azurewebsites.net/api/ReadFromUserName?name=cruz"
+    axios.get(url)
   .then(function (response) {
-   let notes=JSON.parse(response.data)
+    let swap=toString(response.data)
+   let notes=JSON.parse(swap.split("[")[1].split("]")[0])
     notes.forEach(element => {
       let notesCard = document.createElement("div.mdui-card.mdui-hoverable")
       let notesContainer = document.createElement("p")
