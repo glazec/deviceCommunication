@@ -6,8 +6,8 @@ function queryFornotes(){
     
     let username=document.getElementById('username').value
     // console.log(username)
-    let url="http://localhost:7071/api/ReadFromUserName?name=cruz"
-    // "https://pastebinnn.azurewebsites.net/api/ReadFromUserName?name=cruz"
+    // let url="http://localhost:7071/api/ReadFromUserName?name=cruz"
+    let url="https://pastebinnn.azurewebsites.net/api/ReadFromUserName?name=cruz"
     axios.get(url)
   .then(function (response) {
     let swap=toString(response.data)
