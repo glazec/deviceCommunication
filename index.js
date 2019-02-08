@@ -38,3 +38,27 @@ function clearNotesCard(){
    base.removeChild(base.firstElementChild)
  }
 }
+
+function NotesInputConfirm(){
+  mdui.prompt('Username',
+    function (value) {
+      saveGist(value)
+    },
+    function (value) {
+    }
+  );
+}
+
+
+function  saveGist(username){
+  let notes=document.getElementById('notes').value
+  let url="https://pastebinnn.azurewebsites.net/api/saveGist?name="+username+"&notes="+notes
+    axios.get(url)
+  .then(function (response) {
+      alert(response.data)
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
+}

@@ -7,7 +7,8 @@
     <title>DeviceCommun</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdui/0.4.2/css/mdui.min.css"/>
     <link rel="stylesheet" href="./index.css"/>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/0.4.2/js/mdui.min.js"></script>
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/0.4.2/js/mdui.min.js"></script> -->
+   <script src="https://mdui-aliyun.cdn.w3cbus.com/source/dist/js/mdui.min.js"></script>
    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 
@@ -27,10 +28,17 @@
                     </div>
             </div>
             
-            <!-- <div class="mdui-card mdui-hoverable notesBox">
-                <p>dd</p>
-            </div> -->
+                <div class="mdui-textfield">
+                  <textarea class="mdui-textfield-input" id="notes" rows="4" placeholder="Notes"></textarea>
+                </div>
+        <div class="mdui-row">
+                <div class="mdui-col-xs-1 mdui-col-offset-xs-11" >
+                    <button class="mdui-color-theme mdui-btn mdui-btn-raised mdui-ripple" onclick="NotesInputConfirm()"><span class="mdui-text-color-theme-50">Confirm</span></button>
+                </div>
+        </div>
+
             <div id="notsPosition"></div>
+
         </div>
 </body>
 </html>
