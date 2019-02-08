@@ -1,11 +1,7 @@
-var notesCard = document.createElement("div.mdui-card.mdui-hoverable")
-var notesContainer = document.createElement("p")
-
-
 function queryFornotes(){
-    
+    clearNotesCard();
     let username=document.getElementById('username').value
-    let url="https://pastebinnn.azurewebsites.net/api/ReadFromUserName?name=cruz"
+    let url="https://pastebinnn.azurewebsites.net/api/ReadFromUserName?name="+username
     axios.get(url)
   .then(function (response) {
     try {
@@ -27,11 +23,18 @@ function queryFornotes(){
 
 function notesDisplayCard(notes){
   let notesCard = document.createElement("div")
-  notesCard.className='mdui-card mdui-hoverable'
+  notesCard.className='mdui-card mdui-hoverable mdui-m-b-2'
   let notesContainer = document.createElement("p")
   let notesText= document.createTextNode(notes)
   notesContainer.appendChild(notesText)
   notesCard.appendChild(notesContainer)
   let el=document.getElementById('notsPosition')
   el.appendChild(notesCard)
+}
+
+function clearNotesCard(){
+ let base=document.getElementById('notsPosition')
+ while (base.firstElementChild){
+   base.remove(base.firstElementChild)
+ }
 }
