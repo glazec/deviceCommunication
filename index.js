@@ -7,11 +7,19 @@ function queryFornotes(){
     try {
 
       response.data.forEach(element => {
-      notesDisplayCard(element.Notes)
+        if (element.Notes){
+      notesDisplayCard(element.Notes)}
+      else{
+        notesDisplayCard('No Records Found')
+      }
     });
 
     } catch (error) {
-      notesDisplayCard(response.data.Notes)
+      if(response.data.Notes){
+      notesDisplayCard(response.data.Notes)}
+      else{
+        notesDisplayCard('No Records Found')
+      }
     }
     
   })
@@ -55,7 +63,7 @@ function  saveGist(username){
   let url="https://pastebinnn.azurewebsites.net/api/saveGist?name="+username+"&notes="+notes
     axios.get(url)
   .then(function (response) {
-      alert(response.data)
+      console.log(response.data)
   })
   .catch(function (error) {
     console.log(error);
