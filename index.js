@@ -11,7 +11,7 @@ function queryFornotes(){
     axios.get(url)
   .then(function (response) {
     console.log(response)
-    let swap=JSON.parse(response)
+    let swap=JSON.parse(response.data)
    let notes=swap
    console.log(notes)
     notes.forEach(element => {
