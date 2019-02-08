@@ -35,6 +35,6 @@ function notesDisplayCard(notes){
 function clearNotesCard(){
  let base=document.getElementById('notsPosition')
  while (base.firstElementChild){
-   base.remove(base.firstElementChild)
+   base.removeChild(base.firstElementChild)
  }
 }
