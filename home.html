@@ -24,7 +24,7 @@
                                   </div>
                     </div>
                     <div class="mdui-col-xs-1 mdui-col-offset-xs-8" >
-                        <button class="mdui-color-theme mdui-btn mdui-btn-raised mdui-ripple" onclick="queryFornotes()"><span class="mdui-text-color-theme-50">Query</span></button>
+                        <button class="mdui-color-red-500 mdui-btn mdui-btn-raised mdui-ripple" onclick="queryFornotes()"><span class="mdui-text-color-theme-50">Query</span></button>
                     </div>
             </div>
             
@@ -34,12 +34,23 @@
                   <textarea class="mdui-textfield-input" id="notes" rows="4" placeholder="Notes"></textarea>
                   </div>
                 </div>
-                <div class="mdui-col-xs-1 mdui-col-offset-xs-10" >
-                    <button class="mdui-color-theme mdui-btn mdui-btn-raised mdui-ripple mdui-m-b-3" onclick="NotesInputConfirm()"><span class="mdui-text-color-theme-50">Confirm</span></button>
+            </div>
+            <div class="mdui-row">
+                <div class="mdui-col-xs-2 mdui-col-offset-xs-9">
+                        <div class="upload-btn-wrapper">
+                                <button class="btn">Upload a file</button>
+                                <input type="file" name="myfile" id="inputFile"/>
+                              </div>
+                </div>
+            </div>
+            <div class="mdui-row">
+                <div class="mdui-col-xs-1 mdui-col-offset-xs-9" >
+                    <button class="mdui-color-red-500 mdui-btn mdui-btn-raised mdui-ripple mdui-m-b-3" onclick="NotesInputConfirm()"><span class="mdui-text-color-theme-50">Confirm</span></button>
                 </div>
         </div>
-            <div id="notsPosition"></div>
 
+
+            <div id="notsPosition"></div>            
         </div>
 </body>
 </html>
